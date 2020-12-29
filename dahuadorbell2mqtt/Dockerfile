@@ -18,4 +18,4 @@ COPY run.sh /app/run.sh
 RUN npm install
 RUN chmod +x /app/run.sh
 
-CMD /app/run.sh2232
+CMD /app/run.sh
