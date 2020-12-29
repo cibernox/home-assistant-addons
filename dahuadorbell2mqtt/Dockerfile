@@ -15,7 +15,7 @@ RUN apk add --no-cache --update argon2-libs && \
 WORKDIR /app
 
 COPY run.sh /app/run.sh
-RUN cd /app && npm install
+RUN npm install
 RUN chmod +x /app/run.sh
 
 CMD /app/run.sh2232
