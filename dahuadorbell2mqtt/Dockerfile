@@ -10,12 +10,12 @@ ARG DAHUA_BRANCH="main"
 RUN apk add --no-cache --update argon2-libs && \
     apk add --no-cache git nodejs-npm && \
     git clone https://github.com/cibernox/DahuaDoorbell2MQTT.git --branch ${DAHUA_BRANCH} --depth 1 /app && \
-    chmod +x /app/DahuaVTO.js && \
-    npm install
+    chmod +x /app/DahuaVTO.js
 
 WORKDIR /app
 
 COPY run.sh /app/run.sh
+RUN cd /app && npm install
 RUN chmod +x /app/run.sh
 
-CMD /app/run.sh
+CMD /app/run.sh2232
