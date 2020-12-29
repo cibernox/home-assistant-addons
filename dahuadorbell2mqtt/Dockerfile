@@ -8,7 +8,7 @@ ENV LANG C.UTF-8
 ARG DAHUA_BRANCH="main"
 
 RUN apk add --no-cache --update argon2-libs && \
-    apk add --no-cache nodejs-npm && \
+    apk add --no-cache git nodejs-npm && \
     git clone https://github.com/cibernox/DahuaDoorbell2MQTT.git --branch ${DAHUA_BRANCH} --depth 1 /app && \
     chmod +x /app/DahuaVTO.js && \
     npm install
